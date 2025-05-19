@@ -1,67 +1,161 @@
-body{
-    margin:0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(torigth, #0a1c40, #1f4f9a);
-
+/* Base styles */
+body {
+  background: #2e2e2e; /* Fondo oscuro */
+  font-family: 'Arial', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
-.ventana{
-    width: 90% ;
-    max-width: 2000px;
-    margin: 50px auto;
-    border: 2px solid #ccc;
-    background-color: #001a4d;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
-    color: write;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.barra-superior {
-    display: flex;
-    justify-content: space-between;
+
+/* Ventana superior */
+.window-bar {
+  background-color: #333;
+  padding: 8px;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.window-bar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.close {
+  color: red;
+}
+
+.minimize, .maximize {
+  color: white;
+}
+
+/* Menú de navegación */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1c1c1c;
+  padding: 15px 0;
+  position: fixed;
+  top: 40px;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #444;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #555;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #777;
+}
+
+/* Contenido principal */
+.content {
+  padding: 150px 20px 60px 20px;
+  text-align: center;
+  margin-top: 80px; /* Espacio para el menú fijo */
+}
+
+.content h2 {
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 60px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.logo span {
+  font-size: 18px;
+  display: block;
+  color: #bbb;
+}
+
+.slogan {
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Pie de página */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 14px;
+  color: #999;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
     align-items: center;
-    background-color: #faf3f3;
-    padding: 5px 10px;
-    color: black;
   }
-  
-  .icono {
-    width: 20px;
-    height: 20px;
+
+  .content h2 {
+    font-size: 20px;
   }
-  
-  .botones span {
-    margin-left: 10px;
-    padding: 2px 8px;
-    background: #ccc;
-    border: 1px solid #999;
-    cursor: pointer;
+
+  .logo {
+    font-size: 50px;
   }
-  
-  .botones .cerrar {
-    background: red;
-    color: white;
+
+  .footer {
+    font-size: 12px;
   }
-  
-  .contenido {
-    text-align: center;
-    padding: 40px 20px;
-  }
-  
-  h1 {
-    font-size: 3em;
-    margin-bottom: 30px;
-  }
-  
-  .logo img {
-    width: 300px;
-    margin-bottom: 30px;
-  }
-  
-  button {
-    padding: 10px 30px;
-    font-size: 1em;
-    background-color: rgb(59, 49, 49);
-    border: none;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #000;
-  }
+}
+

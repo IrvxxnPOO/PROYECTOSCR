@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Report</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <div class="window-bar">
+    <button class="minimize">−</button>
+    <button class="maximize">▢</button>
+    <button class="close">✕</button>
+  </div>
+
+  <div class="menu">
+    <div class="dropdown">
+      <button class="dropbtn">Reportar</button>
+      <div class="dropdown-content">
+        <a href="#">Desaparecidos</a>
+        <a href="#">Vehículos</a>
+        <a href="#">Otros</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Comunitario</button>
+      <div class="dropdown-content">
+        <a href="#">Reporte</a>
+        <a href="#">Publicar</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Reportes</button>
+      <div class="dropdown-content">
+        <a href="#">Públicos</a>
+        <a href="#">Comunitarios</a>
+        <a href="#">Desaparecidos</a>
+        <a href="#">Otros</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>¿SE EXTRAVIÓ ALGUNA PERSONA?<br>
+        ¿PERDISTE O EXTRAVIASTE ALGO?<br>
+        ¿DENUNCIA ANÓNIMA?<br>
+        ¿FUISTE VÍCTIMA DE UN DELITO?</h2>
+
+    <div class="logo">SR <span>Secure Report</span></div>
+    <p class="slogan">SECURE REPORT realiza un reporte rápido y vuelve tu entorno más seguro</p>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li>Números de emergencia</li>
+      <li>Denuncia anónima</li>
+      <li>Ministerios públicos</li>
+    </ul>
+  </div>
+
+  <script>
+    document.querySelector('.close').onclick = () => alert('Simulación: cerrar ventana');
+    document.querySelector('.minimize').onclick = () => alert('Simulación: minimizar');
+    document.querySelector('.maximize').onclick = () => alert('Simulación: maximizar');
+  </script>
+
+</body>
+</html>
